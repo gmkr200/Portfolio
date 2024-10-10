@@ -1,0 +1,213 @@
+.landing {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .landing--container {
+    display: flex; /* Flex layout for container */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 100%; /* Full height */
+    position: relative; /* Positioning for child elements */
+  }
+  
+  .landing--img {
+    --img-size: 400px; /* Default image size */
+    position: absolute; /* Absolute positioning for image */
+    left: 35%; /* Positioning to the left */
+    transform: translateX(-50%); /* Center image horizontally */
+    width: var(--img-size); /* Image width */
+    height: var(--img-size); /* Image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: opacity 0.3s; /* Transition effect */
+  }
+  
+  .landing--container-left {
+    flex: 35%; /* Take 35% of the width */
+    height: 100%; /* Full height */
+    display: flex; /* Flex layout for left section */
+    align-items: flex-end; /* Align items to the bottom */
+    justify-content: flex-start; /* Align items to the start */
+  }
+  
+  .lcl--content {
+    margin: 3rem; /* Margin for content */
+    width: 100%; /* Full width */
+    display: flex; /* Flex layout for social links */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the start */
+  }
+  
+  .landing--social {
+    font-size: 35px; /* Social icons size */
+    margin: 0 1rem; /* Margin between icons */
+    transition: transform 0.5s; /* Transition for hover effect */
+  }
+  
+  .landing--social:hover {
+    transform: scale(1.2); /* Scale effect on hover */
+  }
+  
+  .landing--container-right {
+    flex: 65%; /* Take 65% of the width */
+    height: 100%; /* Full height */
+    background-color: #5b150d; /* Background color */
+    display: flex; /* Flex layout for right section */
+    flex-direction: column; /* Column layout */
+    align-items: flex-end; /* Align items to the end */
+    justify-content: center; /* Center items vertically */
+  }
+  
+  .lcr--content {
+    width: 45%; /* Width for content */
+    margin-right: 7rem; /* Margin on the right */
+    font-family: var(--primaryFont); /* Font family */
+    font-style: normal; /* Normal font style */
+    color: #e0d9d9; /* Text color */
+  }
+  
+  .lcr--content h1 {
+    font-weight: 600; /* Heading weight */
+    font-size: 3.25rem; /* Main heading size */
+    line-height: 110%; /* Line height for heading */
+    margin: 1rem 0; /* Margin for heading */
+  }
+  
+  .lcr--content p {
+    margin-top: 1.45rem; /* Top margin for paragraphs */
+    font-weight: 500; /* Font weight for paragraphs */
+    font-size: 1.15rem; /* Font size for paragraphs */
+    opacity: 0.7; /* Slight transparency */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1100px) {
+    .landing--img {
+      --img-size: 350px; /* Adjust image size */
+    }
+    .lcl--content {
+      margin: 2rem; /* Adjust margin */
+    }
+  
+    .lcr--content h1 {
+      font-size: 3rem; /* Smaller heading size */
+    }
+  
+    .lcr--content p {
+      margin-top: 0.3rem; /* Adjust margins */
+      margin-bottom: 1rem; /* Adjust bottom margin */
+      font-weight: 500; /* Font weight for paragraphs */
+      font-size: 1rem; /* Smaller paragraph size */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .landing--img {
+      --img-size: 400px; /* Further reduce size */
+    }
+  
+    .lcl--content {
+      margin: 2rem; /* Adjust margin */
+    }
+  
+    .lcr--content {
+      width: 60%; /* Adjust width */
+      margin-top: 10%; /* Top margin */
+      margin-right: 6%; /* Right margin */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .landing--container {
+      flex-direction: column; /* Stack vertically */
+      justify-content: space-between; /* Space items */
+    }
+    .landing--img {
+      --img-size: 200px; /* Smaller size */
+      left: 50%; /* Center the image */
+      top: 30%; /* Adjust vertical position */
+      border: 8px solid #eaeaea; /* Add border */
+      transform: translate(-50%, -50%); /* Center the image */
+    }
+    .landing--container-left {
+      flex: initial; /* Reset flex */
+      width: 100%; /* Full width */
+      height: 30%; /* Adjust height */
+    }
+    .landing--container-right {
+      box-sizing: border-box; /* Box model adjustments */
+      padding: 0 2rem; /* Padding */
+      flex: initial; /* Reset flex */
+      height: 70%; /* Adjust height */
+      width: 100%; /* Full width */
+      background-color: #eaeaea; /* Background color */
+      align-items: center; /* Center content */
+      justify-content: center; /* Center content */
+    }
+    .lcr--content {
+      margin-top: 20%; /* Margin */
+      width: 100%; /* Full width */
+    }
+    .lcr--content h1 {
+      font-size: 2.5rem; /* Adjust heading size */
+      text-align: center; /* Center text */
+    }
+    .lcr--content p {
+      font-size: 0.95rem; /* Adjust paragraph size */
+      text-align: center; /* Center text */
+      margin: 0 auto; /* Center margin */
+      width: 90%; /* Width */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .lcr--content {
+      margin-top: 35%; /* Adjust top margin */
+    }
+  }
+  
+  @media (max-width: 370px) {
+    .lcr--content {
+      margin-top: 60%; /* Adjust top margin */
+    }
+  }
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+    .landing {
+      height: 100%; /* Full height */
+    }
+  
+    .landing--img {
+      --img-size: 150px; /* Smaller image size */
+      left: 50%; /* Center the image */
+      top: 20%; /* Adjust vertical position */
+    }
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 1rem; /* Increased space between buttons */
+    margin-top: 1rem; /* Space above buttons */
+}
+
+.landing-button {
+    padding: 0.6rem 1rem; /* Increased padding for larger buttons */
+    font-size: 1.2rem; /* Increased font size */
+    color: #fff; /* Text color */
+    background-color: #892fc5; /* Background color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* More rounded corners for a fancier look */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.landing-button:hover {
+    background-color: #0c497a; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+

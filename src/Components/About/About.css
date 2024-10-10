@@ -1,0 +1,155 @@
+/* About.css */
+.about-section {
+  min-height: 100vh; /* Full height */
+  position: relative; /* Positioning for absolute elements */
+  background-color: rgba(0, 0, 0, 0.7); /* Optional background for contrast */
+  padding: 8rem 0; /* Top and bottom padding */
+}
+
+.line-styling {
+  position: absolute;
+  top: 50px; /* Position from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  height: 50px; /* Height of the line container */
+  width: 85%; /* Width of the line container */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
+}
+
+.line-styling .style-circle {
+  width: 10px; /* Circle size */
+  height: 10px; /* Circle size */
+  border-radius: 50%; /* Make it circular */
+  background-color: white; /* Circle color */
+}
+
+.line-styling .style-line {
+  width: 95%; /* Line width */
+  height: 5px; /* Line height */
+  border-radius: 10px; /* Rounded corners */
+  background-color: white; /* Line color */
+}
+
+.about-body {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Horizontal layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-around; /* Space between elements */
+  padding-top: 8rem; /* Padding for spacing */
+  height: fit-content; /* Adjust height */
+}
+
+.about-description {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Vertical stacking */
+  align-items: flex-start; /* Align to the left */
+  justify-content: space-evenly; /* Even spacing */
+  flex: 0.5; /* Take half the width */
+  width: 100%; /* Full width */
+}
+
+.about-description > h2 {
+  margin-bottom: 40px; /* Space below heading */
+  font-size: 3.5rem; /* Heading size */
+  font-family: var(--primaryFont); /* Font family */
+  color: white; /* Heading color */
+}
+
+.about-description > p {
+  font-size: 1.25rem; /* Paragraph size */
+  color: #e0d9d9; /* Paragraph color */
+  font-family: var(--primaryFont); /* Font family */
+}
+
+.about-img {
+  margin-top: 40px; /* Space above image */
+  pointer-events: none; /* Disable interactions */
+}
+
+.about-img > img {
+  width: 380px; /* Image width */
+  flex: 0.5; /* Take half the width */
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+  .about-description > h2 {
+      font-size: 3.3rem; /* Responsive heading size */
+      margin-bottom: 30px; /* Space below heading */
+  }
+
+  .about-description > p {
+      font-size: 1.15rem; /* Responsive paragraph size */
+  }
+
+  .about-img > img {
+      width: 300px; /* Responsive image width */
+  } 
+}
+
+@media screen and (max-width: 992px) {
+  .line-styling {
+      top: 20px; /* Adjust position for smaller screens */
+  }
+
+  .about-body {
+      padding-top: 2rem; /* Less padding for smaller screens */
+      flex-direction: column-reverse; /* Stack vertically */
+      align-items: center; /* Center items */
+      justify-content: space-evenly; /* Even spacing */
+  }
+
+  .about-description {
+      flex: 0.6; /* Adjust flex for smaller screens */
+      padding: 20px; /* Add padding */
+  }
+
+  .about-description > h2 {
+      font-size: 3rem; /* Smaller heading size */
+      margin-bottom: 20px; /* Less space below heading */
+  }
+
+  .about-description > p {
+      font-size: 1.1rem; /* Smaller paragraph size */
+  }
+
+  .about-img > img {
+      width: 250px; /* Smaller image width */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .line-styling .style-circle {
+      width: 8px; /* Smaller circle size */
+      height: 8px; /* Smaller circle size */
+  }
+
+  .about-description > h2 {
+      align-self: center; /* Center heading */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .line-styling .style-circle {
+      width: 5px; /* Even smaller circle size */
+      height: 5px; /* Even smaller circle size */
+  }
+
+  .line-styling .style-line {
+      width: 93%; /* Slightly smaller line width */
+      height: 3px; /* Smaller line height */
+  }
+
+  .about-description > h2 {
+      font-size: 2.5rem; /* Smaller heading size */
+  }
+
+  .about-description > p {
+      font-size: 0.95rem; /* Smaller paragraph size */
+  }
+
+  .about-img > img {
+      width: 200px; /* Smaller image width */
+  }
+}

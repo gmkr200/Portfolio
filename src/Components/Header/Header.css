@@ -1,0 +1,50 @@
+html, body {
+    height: 100%; /* Ensure html and body take full height */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .body {
+    background-color:rgba(37, 8, 8, 0.715) ; /* Correct path */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image tiling */
+    background-size: cover; /* Ensure the image covers the full div */
+    min-height: 100vh; /* Ensures the div covers the full height of the viewport */
+    margin: 0; /* Optional: remove default body margin */
+  }
+  
+  
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa; /* You can customize the background */
+  }
+  
+  .logo-img {
+    width: 150px; /* Adjust this to make the logo bigger */
+    height: auto; /* Keep aspect ratio */
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+    margin: 0;
+    padding: 0 50px 0 0; /* 20px padding on the right */
+  }
+  
+  
+  .nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav ul li a:hover {
+    color: #007bff; /* Hover effect color */
+  }

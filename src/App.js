@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/Footer/Footer.jsx';
+import Header from './Components/Header/Header.jsx';
+import Landing from './Components/Landing/Landing.js'; // Or Landing.jsx, depending on the file extension
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='body'> {/* This div should apply the background from CSS */}
+            <Header />
+            <Landing />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
