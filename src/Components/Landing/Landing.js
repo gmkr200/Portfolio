@@ -1,10 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 import './Landing.css';
-import { socialsData } from '../../Data/socialsData'; // Go back two directories to reach `Data`
+import { socialsData } from '../../Data/socialsData'; 
 
 const handleContactClick = () => {
-    // Define your contact logic here, e.g., open a contact form or send an email
+
     alert("Contact form will open");
 };
 
@@ -15,7 +15,7 @@ const handleDownloadResume = () => {
 };
 
 
-const About = () => {
+const Landing = () => {
     return (
         <div className='landing'>
             <div className='landing--container'>
@@ -85,4 +85,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default Landing;

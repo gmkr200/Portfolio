@@ -1,0 +1,53 @@
+.contact {
+  padding: 2rem;
+  background-color: #f5f5f5; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333; /* Dark text color */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 100px; /* Minimum height for the message area */
+}
+
+.submit-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff; /* Text color */
+  background-color: #892fc5; /* Background color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.submit-button:hover {
+  background-color: #005bb5; /* Darker background on hover */
+}
