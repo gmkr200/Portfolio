@@ -3,14 +3,16 @@ import Landing from './Components/Landing/Landing.js';
 import Skills from './Components/Skills/Skills.jsx';
 import Contact from './Components/Contact/Contact.jsx';
 import About from './Components/About/About.jsx';
-import Projects from './Components/Projects/projects.jsx'
-import Footer from'./Components/Footer/Footer.jsx'
-import Header from './Components/Header/Header.jsx'
+import Projects from './Components/Projects/projects.jsx';
+import Footer from'./Components/Footer/Footer.jsx';
+import Header from './Components/Header/Header.jsx';
+import ScrollToTop from './ScrollToTop.js';
 function Layout() {
   return (
     <div>
-      <Header />
+        <Header />
         <Landing />
+        <ScrollToTop />
         <About />
         <Skills />
         <Projects/>
