@@ -1,12 +1,12 @@
 import React from 'react';
 import './Header.css'
 import { Link } from 'react-scroll'
-
+import logo from '../../assets/images/logo.png'
 const Header = () => {
     return (
         <header className="header">
             <div className="logo">
-                <img src="/images/logo.png" alt="Logo" className="logo-img" />
+                <img src={logo} alt="Logo" className="logo-img" />
             </div>
             <nav className="nav">
                 <ul>

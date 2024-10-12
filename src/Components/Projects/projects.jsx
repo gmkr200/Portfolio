@@ -1,34 +1,29 @@
-// Example: src/Components/Portfolio/Portfolio.js
 import React from 'react';
-import ProjectCard from './projectCard';
+import { Link } from 'react-router-dom';
+import './projects.css';
+import { projectsData } from '../../Data/projectsData';
 
-const projects = [
-    {
-        image: './assets/svg/projects/eight.svg',
-        title: 'Project 1',
-        description: 'This is a description of project 1.',
-    },
-    {
-        image: './assets/svg/projects/eight.svg',
-        title: 'Project 2',
-        description: 'This is a description of project 2.',
-    },
-    // Add more projects as needed
-];
-
-const Portfolio = () => {
+const Projects = () => {
     return (
-        <div className="portfolio">
-            {projects.map((project, index) => (
-                <ProjectCard
-                    key={index}
-                    image={project.image}
-                    title={project.title}
-                    description={project.description}
-                />
-            ))}
+        <div className="projects-container" id="projects">
+            <div className="projects-grid">
+                {projectsData.slice(0, 3).map(project => (
+                    <div key={project.id} className="project-card">
+                        <img src={project.image} alt={project.name} className="project-image" />
+                        <div className="project-info">
+                            <h3>{project.name}</h3>
+                            <p>{project.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            {projectsData.length > 3 && (
+                <Link to="/projectsPage" className="see-all-button">
+                    See All Projects
+                </Link>
+            )}
         </div>
     );
 };
 
-export default Portfolio;
+export default Projects;

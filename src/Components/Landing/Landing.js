@@ -1,7 +1,8 @@
-import React,{useContext} from 'react';
+import React from 'react';
 import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 import './Landing.css';
 import { socialsData } from '../../Data/socialsData'; 
+import dp from '../../assets/images/dp.jpg';
 
 const handleContactClick = () => {
 
@@ -52,7 +53,7 @@ const Landing = () => {
 
                 {/* Image Section */}
                 <img
-                    src="./images/dp.jpg" // Your profile picture path
+                    src={dp} // Your profile picture path
                     alt='Manikumarreddy Gajjela'
                     className='landing--img'
                     style={{ width: '380px', borderRadius: '50%' }} // Adjust size as needed

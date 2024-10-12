@@ -1,0 +1,206 @@
+/* Container for the projects grid */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Ensure full-width container */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Grid container for horizontal display */
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* Reduced gap between the project cards */
+    width: 100%;
+    max-width: 1200px; /* Adjust this to your preferred max width */
+    justify-content: space-between; /* Ensures even spacing between cards */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Each individual project card */
+.project-card {
+    position: relative;
+    width: 30%; /* Width for horizontal layout */
+    max-width: 350px; /* Control max width of each card */
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #fff; /* Background for the card */
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* More dramatic shadow on hover */
+}
+
+/* Image within the project card */
+.project-image {
+    width: 100%;
+    height: 250px; /* Adjust height for horizontal layout */
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Info (title and description) */
+.project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .project-info {
+    opacity: 1;
+}
+
+/* Title and description styles */
+.project-info h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    margin-bottom: 40px; /* Ensure space for the button */
+}
+
+/* Fancy button for "See the Project" */
+.project-info .see-project-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fancy gradient background */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.project-info .see-project-button:hover {
+    transform: scale(1.1); /* Slight scale-up on hover */
+    background: linear-gradient(135deg, #ff6b6b, #f7797d); /* Hover gradient */
+}
+
+/* Button to see all projects */
+.see-all-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fancy gradient background */
+    color: white;
+    border-radius: 50px; /* Rounded button */
+    font-size: 1.2rem; /* Larger font for better visibility */
+    text-align: center;
+    align-self: flex-end; /* Align button to the right */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for the button */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.see-all-button:hover {
+    background: linear-gradient(135deg, #ff6b6b, #f7797d); /* Hover gradient */
+    transform: translateY(-5px); /* Lift the button slightly on hover */
+}
+/* ========================================================================================================= */
+/* Container for the all projects page */
+.all-projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Ensure full-width container */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Grid container for horizontal display */
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping if there are too many projects */
+    gap: 15px; /* Reduced gap between the project cards */
+    width: 100%;
+    max-width: 1200px; /* Adjust this to your preferred max width */
+    justify-content: space-between; /* Ensures even spacing between cards */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Each individual project card */
+.project-card {
+    position: relative;
+    width: 30%; /* Width for horizontal layout */
+    max-width: 350px; /* Control max width of each card */
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #fff; /* Background for the card */
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* More dramatic shadow on hover */
+}
+
+/* Image within the project card */
+.project-card img {
+    width: 100%;
+    height: 250px; /* Adjust height for horizontal layout */
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Title and description styles */
+.project-card h3 {
+    font-size: 1.7rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Button to navigate back to home */
+.home-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fancy gradient background */
+    color: white;
+    border-radius: 50px; /* Rounded button */
+    font-size: 1.2rem; /* Larger font for better visibility */
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for the button */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background: linear-gradient(135deg, #ff6b6b, #f7797d); /* Hover gradient */
+    transform: translateY(-5px); /* Lift the button slightly on hover */
+}
