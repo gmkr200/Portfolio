@@ -1,10 +1,7 @@
 import gcp from '../assets/svg/skills/gcp.svg'
 import html from '../assets/svg/skills/html.svg'
-import photoshop from '../assets/svg/skills/photoshop.svg'
 import illustrator from '../assets/svg/skills/illustrator.svg'
 import docker from '../assets/svg/skills/docker.svg'
-import adobeXd from '../assets/svg/skills/adobe-xd.svg'
-import afterEffects from '../assets/svg/skills/after-effects.svg'
 import css from '../assets/svg/skills/css.svg'
 import angular from '../assets/svg/skills/angular.svg'
 import javascript from '../assets/svg/skills/javascript.svg'
@@ -71,7 +68,7 @@ import microsoftoffice from '../assets/svg/skills/microsoftoffice.svg'
 import picsart from '../assets/svg/skills/picsart.svg'
 import sketch from '../assets/svg/skills/sketch.svg'
 import unity from '../assets/svg/skills/unity.svg'
-import wolframalpha from '../assets/svg/skills/wolframalpha.svg'
+
 
 import canva from '../assets/svg/skills/canva.svg'
 
@@ -83,16 +80,10 @@ export const skillsImage = (skill) => {
             return gcp;
         case 'html':
             return html;
-        case 'photoshop':
-            return photoshop;
         case 'docker':
             return docker;
         case 'illustrator':
             return illustrator;
-        case 'adobe xd':
-            return adobeXd;
-        case 'after effects':
-            return afterEffects;
         case 'css':
             return css;
         case 'angular':
@@ -223,8 +214,6 @@ export const skillsImage = (skill) => {
             return sketch;
         case 'unity':
             return unity;
-        case 'wolframalpha':
-            return wolframalpha;
         case 'canva':
             return canva;
         default:
