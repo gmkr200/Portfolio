@@ -3,7 +3,7 @@ export const projectsData = [
     {
         id: 1,
         name: 'Employee Management',
-        description: 'This project aims to build an employee management system that consolidates all information of a company',
+        description: 'This project aims to do something i donot know what to do ',
         tags: ['React', 'CSS', 'Material Ui'],
         code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
         demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
