@@ -2,31 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// Sample project data with GitHub links
-const projectsData = [
-    {
-        id: 1,
-        name: "Project 1",
-        description: "A description of Project 1",
-        image: "/images/project1.jpg",
-        githubLink: "https://github.com/user/project1",
-    },
-    {
-        id: 2,
-        name: "Project 2",
-        description: "A description of Project 2",
-        image: "/images/project2.jpg",
-        githubLink: "https://github.com/user/project2",
-    },
-    {
-        id: 3,
-        name: "Project 3",
-        description: "A description of Project 3",
-        image: "/images/project3.jpg",
-        githubLink: "https://github.com/user/project3",
-    },
-];
+import { projectsData } from '../../Data/projectsData';
 
 const Projects = () => {
     const settings = {

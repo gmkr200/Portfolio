@@ -1,53 +1,115 @@
-.contact {
-  padding: 2rem;
-  background-color: #f5f5f5; /* Light background color */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Main container for the contact section */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.contact h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #333; /* Dark text color */
+/* Equal width for both sections */
+.contact-details, .contact-form-container {
+  flex: 1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form {
+/* Contact details section */
+.contact-details {
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
-.form-group {
-  margin-bottom: 1rem;
+.contact-details h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
 }
 
-label {
-  margin-bottom: 0.5rem;
+.contact-details h3 {
+  margin-bottom: 5px;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
+.contact-details p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.contact-details a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Form section */
+.contact-form-container {
+  background-color: #ffffff;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Compact form elements */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+}
+
 input, textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 5px;
-  font-size: 1rem;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
 }
 
-textarea {
-  min-height: 100px; /* Minimum height for the message area */
-}
-
+/* Smaller submit button */
 .submit-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #fff; /* Text color */
-  background-color: #892fc5; /* Background color */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: background-color 0.3s; /* Smooth background color transition */
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #005bb5; /* Darker background on hover */
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .contact-details, .contact-form-container {
+      margin-top: 20px;
+  }
 }
