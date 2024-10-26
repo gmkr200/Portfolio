@@ -2,15 +2,16 @@
 import React from 'react';
 import './About.css';
 import { aboutData } from '../../Data/aboutData';
+import parse from "html-react-parser";
 
 const About = () => {
     return (
         <section id="about" className="about-section">
             <div className="about-content">
                 <div className="text-content">
-                    <h1>{aboutData.title}</h1>
-                    <p>{aboutData.para1}</p>
-                    <p>{aboutData.para2}</p>
+                    <h1>{parse(aboutData.title)}</h1>
+                    <p>{parse(aboutData.para1)}</p>
+                    <p>{parse(aboutData.para2)}</p>
                 </div>
                 <div className="profile-container">
                     <img

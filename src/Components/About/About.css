@@ -1,51 +1,77 @@
 :root {
-  --primary: #2e2e2e; /* Dark text */
+  --primary: #1a1a1a; /* Darker text for readability */
   --secondary: #f3f4f6; /* Light background */
   --tertiary: #ffffff; /* Light text for contrast */
   --accent-color: #6e5494; /* Accent color for subtle touches */
+  --highlight-color: #4A90E2; /* Highlight for links and headings */
 }
 
 .about-section {
   background: linear-gradient(135deg, #f8f9fa, #e0e0e0); /* Soft gradient */
-  padding: 0 25px; /* Remove top and bottom padding */
-  min-height: 90vh; /* Full screen height */
+  padding: 4rem 25px;
+  min-height: 100vh;
   display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+  justify-content: center;
 }
 
 .about-content {
   display: flex;
-  gap: 4rem; /* Space between text and image */
+  gap: 5rem;
   max-width: 1200px;
-  width: 100%; /* Full width for better layout control */
-  align-items: center;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .text-content {
-  flex: 2; /* Take more space for the text */
-  font-family: 'Arial', sans-serif;
+  flex: 2;
+  font-family: 'Poppins', sans-serif;
   animation: fadeInLeft 1s ease-in-out;
-  margin-left: 20px; /* Smooth fade-in animation */
+  margin-left: 20px;
 }
 
 .text-content h1 {
-  font-size: 3rem; /* Larger heading */
-  color: var(--primary); /* Dark text */
-  margin-bottom: 1.2rem; /* Adjust spacing */
-  letter-spacing: 1.5px; /* Improve spacing */
+  font-size: 3rem; /* Reduced heading size slightly */
+  line-height: 1.2; /* Tighter spacing for heading */
+  color: #000000;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for pop */
+}
+
+.text-content h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--highlight-color);
+  margin-top: 8px;
 }
 
 .text-content p {
-  font-size: 1.2rem; /* Larger paragraph text */
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  max-width: 600px; /* Prevent text from stretching */
+  font-size: 1.1rem; /* Slightly reduced font size */
+  line-height: 1.5; /* Reduced line height for tighter spacing */
+  color: #333; /* Ensure readability with dark text */
+  margin-bottom: 0.8rem; /* Reduce spacing between paragraphs */
+  max-width: 600px; /* Maintain good readability width */
+  text-align: justify; /* Align text for cleaner layout */
+  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.text-content p a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-content p a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .profile-container {
-  flex: 1; /* Image takes up 1/3 of the space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,18 +79,19 @@
 }
 
 .profile-picture {
-  width: 450px; /* Make image larger */
-  height: 350PX;
-  border-radius: 50%; /* Circular image */
-  box-shadow: none; /* Remove shadow */
-  transition: transform 0.4s ease-in-out; /* Smooth scaling animation */
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  border: 6px solid var(--secondary);
 }
 
 .profile-picture:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Fade-in animations */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -87,16 +114,32 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 900px) {
   .about-content {
-    flex-direction: column-reverse; /* Stack content vertically */
+    flex-direction: column-reverse;
     text-align: center;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .profile-picture {
-    width: 300px; /* Adjust image size for smaller screens */
+    width: 300px;
+    height: 300px;
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+  .text-content p {
+    font-size: 1rem;
+    line-height: 1.4; /* Further reduce line spacing on smaller screens */
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-picture {
+    width: 250px;
+    height: 250px;
   }
 
   .text-content h1 {

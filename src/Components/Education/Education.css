@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #2e2e2e;
+    --secondary-color: #ffffff;
+    --accent-color: #4A90E2;
+    --highlight-color: #6e5494;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .education-wrapper {
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #f0f4f8, #e2e6e9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .education-header {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .education-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .education-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 2;
+  }
+  
+  .education-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 300px; /* Reduced size */
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .education-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px var(--shadow-color);
+  }
+  
+  .degree {
+    font-size: 1.4rem;
+    color: var(--highlight-color);
+    margin-bottom: 0.3rem;
+  }
+  
+  .institution {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 0.3rem;
+  }
+  
+  .duration {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .details {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
+  .roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  .roadmap-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle {
+    width: 15px;
+    height: 15px;
+    background-color: var(--highlight-color);
+    border-radius: 50%;
+  }
+  
+  .line {
+    width: 4px;
+    height: 60px;
+    background-color: var(--highlight-color);
+    margin-top: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .education-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .education-cards {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .education-card {
+      width: 90%; /* Adjust width for smaller screens */
+    }
+  
+    .roadmap {
+      display: none; /* Hide roadmap for smaller screens */
+    }
+  }
+  
