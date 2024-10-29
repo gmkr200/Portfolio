@@ -1,40 +1,89 @@
-/* Footer container */
+:root {
+  --footer-bg-color: #2e2e2e;
+  --footer-text-color: #ffffff;
+  --footer-link-color: #4A90E2;
+  --footer-link-hover-color: #ffffff;
+  --social-icon-color: #f0f0f0;
+}
+
 .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 0.7rem;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.social-links a {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--footer-link-hover-color);
+  transform: scale(1.1);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--social-icon-color);
+}
+
+/* Add a slight fade-in animation */
+.footer {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  /* Footer content */
-  .footer-content p {
-    margin: 0;
-    font-size: 14px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Social links container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .social-links {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 1rem;
   }
-  
-  /* Social links */
-  .social-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+
+  .footer-content p {
+    font-size: 0.9rem;
   }
-  
-  /* Hover effect for social links */
-  .social-links li a:hover {
-    color: #61dafb;
-  }
-  
+}

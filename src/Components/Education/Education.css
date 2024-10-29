@@ -5,6 +5,9 @@
   --highlight-color: #6e5494;
   --roadmap-line: #4A90E2;
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-color-1: linear-gradient(135deg, #ffecd2, #fcb69f);
+  --card-color-2: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  --card-color-3: linear-gradient(135deg, #fddb92, #d1fdff);
 }
 
 .education-wrapper {
@@ -12,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   background: linear-gradient(135deg, #f3f4f6, #e2e6e9);
-  padding: 5rem 2rem;
+  padding: 3rem 1rem;
   gap: 3rem;
 }
 
@@ -57,13 +60,21 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  background-color: var(--secondary-color);
   border-radius: 15px;
   box-shadow: 0 10px 25px var(--shadow-color);
   padding: 1.5rem;
   width: 100%;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card-color-1); /* Default gradient background */
+}
+
+.education-card:nth-child(2) {
+  background: var(--card-color-2);
+}
+
+.education-card:nth-child(3) {
+  background: var(--card-color-3);
 }
 
 .education-card:hover {

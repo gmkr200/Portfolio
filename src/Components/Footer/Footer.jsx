@@ -1,19 +1,33 @@
 import React from 'react';
 import './Footer.css';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Import icons
+import socialData from '../../Data/socialsData'
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-content">
-                <p>© 2024 Your Name. All Rights Reserved.</p>
+                <p>Made by Manikumarreddy</p>
                 <ul className="social-links">
-                    <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><a href="mailto:youremail@example.com">Email</a></li>
+                    <li>
+                        <a href="socialData.github" target="_blank" rel="noopener noreferrer">
+                            <FaGithub className="social-icon" /> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="socialData.linkedIn" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin className="social-icon" /> LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:gmkr300@gmail.com">
+                            <FaEnvelope className="social-icon" /> Email
+                        </a>
+                    </li>
                 </ul>
             </div>
         </footer>
     );
-}
+};
 
 export default Footer;
