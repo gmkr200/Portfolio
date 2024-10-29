@@ -1,131 +1,149 @@
 :root {
-    --primary-color: #2e2e2e;
-    --secondary-color: #ffffff;
-    --accent-color: #4A90E2;
-    --highlight-color: #6e5494;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  .education-wrapper {
-    padding: 3rem 1rem;
-    background: linear-gradient(to right, #f0f4f8, #e2e6e9);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .education-header {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
+  --primary-color: #2e2e2e;
+  --secondary-color: #ffffff;
+  --accent-color: #4A90E2;
+  --highlight-color: #6e5494;
+  --roadmap-line: #4A90E2;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.education-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f3f4f6, #e2e6e9);
+  padding: 5rem 2rem;
+  gap: 3rem;
+}
+
+.education-title {
+  font-size: 3rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.education-content {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.education-roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 2;
+  padding-right: 2rem;
+  position: relative;
+}
+
+.education-roadmap::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: var(--roadmap-line);
+  right: 15px;
+  top: 0;
+}
+
+.education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  padding: 1.5rem;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--roadmap-line);
+  border-radius: 50%;
+}
+
+.education-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+}
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-icon {
+  color: var(--secondary-color);
+  font-size: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
   .education-content {
-    display: flex;
-    gap: 2rem;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  
-  .education-cards {
-    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    flex: 2;
+    align-items: center;
   }
-  
+
+  .profile-image {
+    width: 300px;
+    height: 300px;
+  }
+
   .education-card {
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    padding: 1rem;
-    width: 300px; /* Reduced size */
-    box-shadow: 0 5px 15px var(--shadow-color);
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 90%;
   }
-  
-  .education-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .education-roadmap::after {
+    display: none;
   }
-  
-  .degree {
-    font-size: 1.4rem;
-    color: var(--highlight-color);
-    margin-bottom: 0.3rem;
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
   }
-  
-  .institution {
-    font-size: 1.1rem;
-    color: var(--accent-color);
-    margin-bottom: 0.3rem;
-  }
-  
-  .duration {
-    font-size: 1rem;
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .details {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.4;
-    text-align: justify;
-  }
-  
-  .roadmap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
-  }
-  
-  .roadmap-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
-  .circle {
-    width: 15px;
-    height: 15px;
-    background-color: var(--highlight-color);
-    border-radius: 50%;
-  }
-  
-  .line {
-    width: 4px;
-    height: 60px;
-    background-color: var(--highlight-color);
-    margin-top: 5px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .education-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .education-cards {
-      width: 100%;
-      align-items: center;
-    }
-  
-    .education-card {
-      width: 90%; /* Adjust width for smaller screens */
-    }
-  
-    .roadmap {
-      display: none; /* Hide roadmap for smaller screens */
-    }
-  }
-  
+}
