@@ -1,4 +1,3 @@
-import { BsWatch } from "react-icons/bs";
 import one from "../assets/images/1.png";
 import two from "../assets/images/2.png";
 import three from "../assets/images/3.png";

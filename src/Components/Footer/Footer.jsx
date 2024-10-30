@@ -1,7 +1,8 @@
 import React from 'react';
 import './Footer.css';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Import icons
-import socialData from '../../Data/socialsData'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { socialsData } from "../../Data/socialsData"
+
 
 const Footer = () => {
     return (
@@ -10,12 +11,12 @@ const Footer = () => {
                 <p>Made by Manikumarreddy</p>
                 <ul className="social-links">
                     <li>
-                        <a href="socialData.github" target="_blank" rel="noopener noreferrer">
+                        <a href={socialsData.github} target="_blank" rel="noopener noreferrer">
                             <FaGithub className="social-icon" /> GitHub
                         </a>
                     </li>
                     <li>
-                        <a href="socialData.linkedIn" target="_blank" rel="noopener noreferrer">
+                        <a href={socialsData.linkedIn} target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className="social-icon" /> LinkedIn
                         </a>
                     </li>
