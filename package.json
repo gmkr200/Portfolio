@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://gmkr200.github.io/Portfolio/",
+  "homepage": "https://yourusername.github.io/Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,11 +30,14 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "no-unused-vars": "off"
+  }
+},
   "browserslist": {
     "production": [
       ">0.2%",
