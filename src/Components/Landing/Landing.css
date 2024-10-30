@@ -11,7 +11,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  
 }
 
 /* Landing Section with Gradient Background */
@@ -20,6 +20,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden; 
   background: linear-gradient(
     to right, 
     var(--secondaryColorLeft) 35%, 

@@ -1,33 +1,36 @@
 export const skillsData = [
-    'HTML',
-    'Fastify',
-    'Blender',
-    'Figma',
-    'Javascript',
-    'CSS',
-    'React',
-    'Django',
-]
-
+  "HTML",
+  "CSS",
+  "JS",
+  "React",
+  "Next JS",
+  "Node JS",
+  "Angular",
+  "Docker",
+  "GCP",
+  "Azure",
+  "C#",
+  "Python",
+  "Typescript",
+  "Git",
+  "MongoDB",
+  "MySQL",
+  "PostgreSQL",
+  "AWS",
+];
 
 // AVAILABLE SKILLS
 
 /* 
-    HTML
-    CSS
-    JS 
-    React
-    Next JS
+    
     Nuxt JS
-    Node JS
+   
     Vue
-    Angular
-    Docker
+    
     Photoshop
     Illustrator
     Svelte
-    GCP
-    Azure
+    
     Fastify
     Haxe
     Ionic
@@ -46,8 +49,7 @@ export const skillsData = [
     MemSQL
     C
     C++
-    C#
-    Python
+    
     Java
     Julia
     Matlab
@@ -58,20 +60,18 @@ export const skillsData = [
     PHP
     Flutter
     Dart
-    Typescript
+   
     Swift
-    Git
+   
     Figma
     Canva
     Ubuntu
     Bootstrap
-    MongoDB
+    
     Tailwind
     ViteJS
     VuetifyJS
-    MySQL
-    PostgreSQL
-    AWS
+    
     Firebase
     Blender
     Premiere Pro

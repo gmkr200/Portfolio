@@ -1,0 +1,50 @@
+/* ScrollToTop.css */
+
+/* Container to ensure visibility and z-index */
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient effect */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circle shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 9999; /* Ensure it stays on top */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+}
+
+/* Visible state for the button */
+.scroll-to-top-button.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); /* Normal size */
+}
+
+/* Button hover effect */
+.scroll-to-top-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient */
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+/* Animation for the button's appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

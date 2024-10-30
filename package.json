@@ -1,43 +1,19 @@
 {
   "name": "portfolio",
-  "homepage": "https://yourusername.github.io/Portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "emailjs-com": "^3.2.0",
-    "git-pages": "^0.8.1",
-    "html-react-parser": "^5.1.18",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0",
-    "react-marquee-slider": "^1.1.5",
-    "react-router-dom": "^6.26.2",
-    "react-scripts": "5.0.1",
-    "react-scroll": "^1.9.0",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "config-overrides.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-  "extends": [
-    "react-app",
-    "react-app/jest"
-  ],
-  "rules": {
-    "no-unused-vars": "off"
-  }
-},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react-app-rewired": "^2.2.1"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -50,7 +26,16 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^6.2.0"
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "html-react-parser": "^5.1.18",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-marquee-slider": "^1.1.5",
+    "react-router-dom": "^6.27.0",
+    "react-scroll": "^1.9.0",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^4.2.4"
   }
 }
