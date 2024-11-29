@@ -3,17 +3,17 @@ import dp from "../assets/images/dp.jpg";
 export const LandingData = {
   dp: dp,
   para1: `
-    Hi, I'm <strong>Manikumarreddy Gajjela</strong>, a passionate
-    full-stack developer based in New York, NY. With over 4 years of
-    experience, I specialize in creating robust and scalable web
-    applications using modern technologies.
-  `,
-  para2: `
- Currently, I work at <strong>Tetra Computing LLC</strong> as a
-              Full Stack Developer, developing high-performance applications
-              with <strong>React.js</strong>, <strong>Node.js</strong>,
-              <strong>Express.js</strong>, and <strong>AWS</strong>.`,
-  para3: `I hold a Bachelor's degree from
-              <strong>Osmania University</strong> and am pursuing a Master’s at
-              <strong>Pace University</strong>.`,
+  Hello and welcome! I'm <strong>Manikumarreddy Gajjela</strong>, a thinker, a creator, and a lifelong learner who finds beauty in the art of development. 
+  To me, coding is more than a profession—it's a canvas where logic and imagination meet to build something extraordinary.`,
+para2: `
+  "Code is poetry," they say, and I believe it. Every line I write is a verse, every function a stanza, 
+  and every application a story brought to life. Development is not just solving problems; it's about weaving ideas into the fabric of reality, 
+  one line at a time.`,
+para3: `
+  I see the world of technology as an infinite playground where creativity knows no bounds. 
+  With every new project, I embark on a journey—a quest to transform the intangible into something meaningful, 
+  to create solutions that empower, inspire, and endure.`,
+
+
+
 };

@@ -28,14 +28,24 @@ import git from "../assets/svg/skills/git.svg";
 import graphql from "../assets/svg/skills/graphql.svg";
 import nginx from "../assets/svg/skills/nginx.svg";
 import numpy from "../assets/svg/skills/numpy.svg";
-
 import azure from "../assets/svg/skills/azure.svg";
 import blender from "../assets/svg/skills/blender.svg";
+import nodejs from "../assets/svg/skills/nodejs.svg";
+import dotnetcore from "../assets/svg/skills/dotnetcore.svg";
+import kubernetes from "../assets/svg/skills/kubernetes.svg";
+import visualstudio from "../assets/svg/skills/visualstudio.svg";
+import jira from "../assets/svg/skills/jira.svg";
+import redux from "../assets/svg/skills/redux.svg";
+import terraform from "../assets/svg/skills/terraform.svg";
+import azuredevops from "../assets/svg/skills/azuredevops.svg";
+import express from "../assets/svg/skills/express.svg";
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
     case "html":
       return html;
+    case "express":
+      return express;
     case "docker":
       return docker;
     case "css":
@@ -90,7 +100,6 @@ export const skillsImage = (skill) => {
       return git;
     case "graphql":
       return graphql;
-
     case "nginx":
       return nginx;
     case "numpy":
@@ -99,57 +108,23 @@ export const skillsImage = (skill) => {
       return azure;
     case "blender":
       return blender;
-
+    case "node.js":
+      return nodejs;
+    case "dot net core":
+      return dotnetcore;
+    case "kubernetes":
+      return kubernetes;
+    case "visual studio":
+      return visualstudio;
+    case "jira":
+      return jira;
+    case "redux":
+      return redux;
+    case "terraform":
+      return terraform;
+    case "azure devops":
+      return azuredevops;
     default:
       break;
   }
 };
-// =================
-// case 'bootstrap':
-//     return bootstrap;
-// case 'bulma':
-//     return bulma;
-// case 'capacitorjs':
-//     return capacitorjs;
-// case 'coffeescript':
-//     return coffeescript;
-// case 'memsql':
-//     return memsql;
-//     case 'fastify':
-//         return fastify;
-//     case 'figma':
-//         return figma;
-//     case 'flutter':
-//         return flutter;
-//     case 'haxe':
-//         return haxe;
-//     case 'ionic':
-//         return ionic;
-//     case 'markdown':
-//         return markdown;
-//     case 'microsoft office':
-//         return microsoftoffice;
-//     case 'picsart':
-//         return picsart;
-//     case 'sketch':
-//         return sketch;
-//     case 'unity':
-//         return unity;
-//     case 'canva':
-//         return canva;
-//         case 'premiere pro':
-//             return premierepro;
-//         case 'pytorch':
-//             return pytorch;
-//         case 'selenium':
-//             return selenium;
-//         case 'strapi':
-//             return strapi;
-//         case 'tensorflow':
-//             return tensorflow;
-//         case 'webix':
-//             return webix;
-//         case 'wordpress':
-//             return wordpress;
-//             case 'c++':
-//             return cplusplus;

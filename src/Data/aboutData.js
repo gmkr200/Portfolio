@@ -1,12 +1,13 @@
 import whoImage from "../assets/images/who.png";
 export const aboutData = {
-  title: "Who I am",
-  para1: `I am <strong>Manikumar Reddy Gajjela</strong>, a versatile <strong>Full Stack Developer</strong> with  expertise in building high-performance web applications using 
-                <strong>React.js, Node.js, Express.js, PostgreSQL,</strong> and <strong>AWS</strong>. With a passion for creating seamless user experiences, I excel in 
-                architecting <strong>RESTful APIs</strong>, optimizing cloud-native deployments, and driving efficiency through DevOps practices like 
-                <strong>CI/CD, Docker,</strong> and <strong>Kubernetes</strong>.`,
-  para2: `I’ve led impactful projects—boosting user engagement by <strong>20%</strong> and cutting query response times by <strong>25%</strong>—while mentoring teams and 
-  ensuring code quality through <em>TDD</em> and <em>Agile</em> methodologies. Armed with a <strong>Master’s in Computer Science from Pace University</strong> 
-  and experience across fast-paced environments, I am committed to building scalable, innovative solutions that make a difference.`,
+  title: "Who I Am",
+  para1: `I am <strong>Manikumar Reddy Gajjela</strong>, a passionate and versatile <strong>Full Stack Developer</strong> with expertise in creating scalable and efficient web applications. 
+                My journey as a developer has been shaped by hands-on experience with <strong>.NET Core, React.js, Node.js, Express.js,</strong> and <strong>SQL</strong>, 
+                as well as leveraging cloud platforms like <strong>Azure</strong> and <strong>AWS</strong>. I thrive on crafting seamless user experiences, designing robust 
+                <strong>RESTful APIs</strong>, and optimizing deployment processes with DevOps tools such as <strong>CI/CD, Docker,</strong> and <strong>Kubernetes</strong>.`,
+  para2: `My approach to development is rooted in collaboration, innovation, and a commitment to excellence. I take pride in my ability to bridge the gap between front-end elegance and back-end functionality, 
+                ensuring that every application I build is not only efficient but also intuitive and user-friendly. Following <em>Agile</em> methodologies and <em>Test-Driven Development (TDD)</em>, 
+                I focus on delivering clean, reliable code that meets and exceeds expectations. Pursuing a <strong>Master’s in Computer Science from Pace University</strong>, 
+                I am driven by a desire to learn, grow, and create impactful solutions that inspire and empower users.`,
   image: whoImage,
 };

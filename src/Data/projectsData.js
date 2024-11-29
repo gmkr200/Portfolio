@@ -4,6 +4,7 @@ import three from "../assets/images/3.png";
 import four from "../assets/images/4.png";
 import five from "../assets/images/5.png";
 import six from "../assets/images/6.png";
+import seven from "../assets/images/7.png";
 
 export const projectsData = [
   {
@@ -41,6 +42,12 @@ export const projectsData = [
     name: "Timer",
     githubLink: "https://github.com/gmkr200/Stopwatch",
     image: six,
+  },
+  {
+    id: 7,
+    name: "Back End Route",
+    githubLink: "https://github.com/gmkr200/Employees_management",
+    image: seven,
   },
 ];
 
