@@ -3,7 +3,10 @@ name: Deploy Portfolio to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main  # Change if your main branch has a different name
+
+permissions:
+  contents: write  # ✅ Grants permission to write to the repository
 
 jobs:
   build-deploy:
@@ -15,7 +18,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install  # Adjust based on your framework (React, Vue, Angular)
+          npm install  # If using React, Vue, or Angular
 
       - name: Build Project
         run: |
@@ -24,7 +27,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: build
+          branch: gh-pages  # The deployment branch
+          folder: build      # Change this based on your framework (React: build, Angular: dist/<project-name>)
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
