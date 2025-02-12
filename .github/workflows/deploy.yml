@@ -1,0 +1,30 @@
+ 
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          npm install  # If using React, Vue, or Angular
+
+      - name: Build Project
+        run: |
+          npm run build  # Modify if using Angular (ng build --prod)
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The deployment branch
+          folder: build      # Change this based on your framework (React: build, Angular: dist/<project-name>)
+          clean: true
