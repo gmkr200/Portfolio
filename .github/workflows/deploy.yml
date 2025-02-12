@@ -1,4 +1,3 @@
- 
 name: Deploy Portfolio to GitHub Pages
 
 on:
@@ -16,7 +15,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install  # If using React, Vue, or Angular
+          npm install  # Adjust based on your framework (React, Vue, Angular)
 
       - name: Build Project
         run: |
@@ -25,6 +24,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # The deployment branch
-          folder: build      # Change this based on your framework (React: build, Angular: dist/<project-name>)
+          branch: gh-pages
+          folder: build
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
