@@ -1,13 +1,10 @@
 export const skillsData = [
- "HTML",
+"HTML",
 "CSS",
 "JavaScript",
 "react",
 "Node.js",
 "Express",
-"dot net core",
-
-"C#",
 "MySQL",
 "MongoDB",
 "PostgreSQL",
@@ -22,8 +19,9 @@ export const skillsData = [
 "TypeScript",
 "Terraform",
 "Azure DevOps",
-// "CI/CD",
-// "Agile",
+"CI/CD",
+"Agile",
+"Java",
 
 ];
 
