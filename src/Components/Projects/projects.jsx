@@ -47,7 +47,7 @@ const Projects = ({ showAll = false }) => {
             </div>
             {!showAll && (
                 <div className="view-all-projects">
-                    <Link to="/projects" className="view-all-button">
+                    <Link to="/projectsPage" className="view-all-button">
                         View All Projects
                     </Link>
                 </div>

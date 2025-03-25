@@ -1,9 +1,11 @@
+/* Section Styling */
 .projects-section {
   padding: 4rem 2rem;
   background-color: #f9fafb;
   text-align: center;
 }
 
+/* Headings */
 .projects-heading {
   font-size: 2.5rem;
   font-weight: 700;
@@ -17,6 +19,7 @@
   margin-bottom: 2rem;
 }
 
+/* Grid Layout */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -26,11 +29,12 @@
   padding: 0 1rem;
 }
 
+/* Project Card */
 .project-card {
   background-color: #ffffff;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -38,16 +42,18 @@
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Image */
 .project-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
+/* Info Section */
 .project-info {
   padding: 1rem 1.5rem;
   flex-grow: 1;
@@ -66,6 +72,7 @@
   margin-bottom: 1rem;
 }
 
+/* Links */
 .project-links {
   display: flex;
   gap: 1rem;
@@ -93,8 +100,10 @@
 .project-link.demo:hover {
   background-color: #047857;
 }
+
+/* Buttons (View All / Back to Home) */
 .view-all-projects {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   text-align: center;
 }
 
@@ -110,5 +119,16 @@
 
 .view-all-button:hover {
   background-color: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 2rem;
+  }
+
+  .project-image {
+    height: 180px;
+  }
 }
 
