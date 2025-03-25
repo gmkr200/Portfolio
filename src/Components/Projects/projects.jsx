@@ -1,53 +1,57 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { projectsData } from "../../Data/projectsData";
-import "./projects.css"; // Ensure the CSS is imported
+import { Link } from "react-router-dom";
+import "./projects.css";
 
-const Projects = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 1200, // Smooth and slower movement
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        autoplay: true,
-        autoplaySpeed: 2500, // Adjusted autoplay speed
-        cssEase: "ease-in-out", // Smooth transition effect
-        pauseOnHover: true,
-    };
+const Projects = ({ showAll = false }) => {
+    const displayedProjects = showAll ? projectsData : projectsData.slice(0, 3);
 
     return (
         <section className="projects-section">
             <h2 className="projects-heading">My Projects</h2>
-            <div className="projects-container" id="projects">
-                <Slider {...settings}>
-                    {projectsData.map((project) => (
-                        <div key={project.id} className="project-card-wrapper">
-                            <div className="project-card">
-                                <img
-                                    src={project.image}
-                                    alt={project.name}
-                                    className="project-image"
-                                />
-                                <div className="project-info">
-                                    <h3 className="project-title">{project.name}</h3>
+            <p className="projects-subheading">A collection of works showcasing my skills and creativity.</p>
+            <div className="projects-grid" id="projects">
+                {displayedProjects.map((project) => (
+                    <div key={project.id} className="project-card">
+                        <img
+                            src={project.image}
+                            alt={project.name}
+                            className="project-image"
+                        />
+                        <div className="project-info">
+                            <h3 className="project-title">{project.name}</h3>
+                            <p className="project-description">{project.description}</p>
+                            <div className="project-links">
+                                <a
+                                    href={project.githubLink}
+                                    className="project-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                </a>
+                                {project.demoLink && (
                                     <a
-                                        href={project.githubLink}
-                                        className="github-link"
+                                        href={project.demoLink}
+                                        className="project-link demo"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        View on GitHub
+                                        Live Demo
                                     </a>
-                                </div>
+                                )}
                             </div>
                         </div>
-                    ))}
-                </Slider>
+                    </div>
+                ))}
             </div>
+            {!showAll && (
+                <div className="view-all-projects">
+                    <Link to="/projects" className="view-all-button">
+                        View All Projects
+                    </Link>
+                </div>
+            )}
         </section>
     );
 };
