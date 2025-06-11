@@ -1,187 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;600&display=swap');
+
 :root {
-  --primaryFont: 'Poppins', sans-serif;
-  --primaryColor: #111111; /* Dark text */
-  --secondaryColorLeft: #d3f3ee; /* Light green */
-  --secondaryColorRight: #359ca7a7; /* Soft blue */
-  --accentColor: #4A90E2; /* Accent for buttons */
-  --shadowColor: rgba(0, 0, 0, 0.15); /* Soft shadow */
+  --headingFont: 'Playfair Display', serif;
+  --bodyFont: 'Space Grotesk', sans-serif;
+
+  --primaryColor: #0a0a0a;
+  --gradientText: linear-gradient(90deg, #6e44ff, #43e97b);
+  --accentColor: #6e44ff;
+  --buttonGradient: linear-gradient(to right, #6e44ff, #9d50ff);
+  --buttonGradientHover: linear-gradient(to right, #43e97b, #38f9d7);
+  --shadowColor: rgba(0, 0, 0, 0.15);
+  --backgroundGradient: linear-gradient(120deg, #f0f9ff 30%, #c3ecf2 100%);
 }
 
-body, html {
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  
+  font-family: var(--bodyFont);
 }
 
-/* Landing Section with Gradient Background */
-.landing {
-  height: 110vh;
+/* Section Container */
+.landing-section {
+  width: 100%;
+  height: 100vh;
+  background: var(--backgroundGradient);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden; 
-  background: linear-gradient(
-    to right, 
-    var(--secondaryColorLeft) 35%, 
-    var(--secondaryColorRight) 65%
-  );
-  overflow: hidden;
-  position: relative;
-}
-
-/* Container for Profile Image and Text */
-.landing--container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 1rem;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* Profile Image Section */
-.landing--img {
-  --img-size: 370px;
-  width: var(--img-size);
-  height: var(--img-size);
-  border-radius: 55%; /* Circular image */
-  object-fit: cover;
-  position: relative;
-  border: 8px var(--secondaryColorLeft); /* Smooth border blending */
-  background: linear-gradient(
-    to right, 
-    var(--secondaryColorLeft), 
-    var(--secondaryColorRight)
-  );
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1), /* Subtle inner shadow */
-              0 10px 30px var(--shadowColor); /* Outer shadow */
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-/* Hover effect on profile image */
-.landing--img:hover {
-  transform: scale(1.05); /* Slight zoom */
-  border-color: rgba(255, 255, 255, 0.5); /* Subtle white border on hover */
-}
-
-/* Text Section */
-.landing--container-left {
-  flex: 1;
+/* Layout */
+.landing-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 10px;
-}
-
-.lcl--content {
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+  max-width: 1300px;
   width: 100%;
-  margin: 1rem 0;
-  font-family: var(--primaryFont);
+  flex-wrap: wrap;
 }
 
-/* Enhanced Text */
-.lcr--content h1 {
-  font-size: 3rem;
-  font-weight: 700;
+/* Left Column */
+.landing-left {
+  flex: 1;
+  max-width: 900px;
+}
+
+.intro-text {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.gradient-text {
+  font-size: 3.2rem;
+  font-family: var(--headingFont);
+  background: var(--gradientText);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.sub-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
   margin-bottom: 1rem;
-  color: var(--primaryColor);
-}
-
-.lcr--content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: var(--primaryColor);
-  opacity: 0.85;
-  line-height: 1.6;
+  color: #222;
+  width: 100%;
+  max-width: 900px;
 }
 
 /* Social Icons */
+.social-icons {
+  margin-bottom: 1.5rem;
+}
+
 .landing--social {
-  font-size: 50px; /* Larger size */
-  margin: 0 10px;
-  color: #4A90E2;
-  transition: transform 0.5s, color 0.3s;
+  font-size: 1.8rem;
+  color: var(--accentColor);
+  margin-right: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .landing--social:hover {
-  transform: scale(1.3); /* Zoom effect on hover */
-  color: #357ABD;
+  transform: scale(1.2);
+  color: #4a00e0;
 }
 
 /* Buttons */
-.button-container {
+.button-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
-.landing-button {
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
-  background-color: var(--accentColor);
-  color: #fff;
+.primary-btn,
+.secondary-btn {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-family: var(--headingFont);
   border: none;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 5px 15px var(--shadowColor);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 8px 20px var(--shadowColor);
+  transition: all 0.3s ease;
 }
 
-.landing-button:hover {
-  background-color: #357ABD;
+.primary-btn {
+  background: var(--buttonGradient);
+}
+
+.secondary-btn {
+  background: var(--accentColor);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  background: var(--buttonGradientHover);
   transform: scale(1.05);
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  .landing--container {
-    flex-direction: column;
-    align-items: center;
+/* Right Column - Image */
+.landing-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.image-wrapper {
+  background: radial-gradient(circle at center, #dfefff, #a6d3e3);
+  padding: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.social-icons-right {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.landing--social {
+  font-size: 2.2rem; /* Increased from 1.6rem */
+  color: #0e76a8; /* You can choose another vivid color or gradient */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.landing--social:hover {
+  transform: scale(1.25);
+  color: #ff6b6b; /* Nice hover contrast – you can try #ff4081, #ffd700, etc. */
+}
+
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .landing-container {
+    flex-direction: column-reverse;
     text-align: center;
+    gap: 3rem;
   }
 
-  .landing--img {
-    --img-size: 300px;
-    margin-bottom: 2rem;
+  .gradient-text {
+    font-size: 2.6rem;
   }
 
-  .lcr--content h1 {
-    font-size: 2.5rem;
+  .profile-img {
+    width: 240px;
+    height: 240px;
   }
 
-  .lcr--content p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .landing--img {
-    --img-size: 250px;
-  }
-
-  .lcr--content h1 {
-    font-size: 2rem;
-  }
-
-  .lcr--content p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .landing--img {
-    --img-size: 200px;
-  }
-
-  .lcr--content h1 {
-    font-size: 1.8rem;
-  }
-
-  .lcr--content p {
-    font-size: 0.95rem;
+  .image-wrapper {
+    padding: 1.5rem;
   }
 }

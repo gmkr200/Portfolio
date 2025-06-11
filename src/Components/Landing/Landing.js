@@ -1,3 +1,4 @@
+// Updated Fancy Hero Landing Page with Socials on Right
 import React from "react";
 import {
   FaLinkedin,
@@ -6,18 +7,51 @@ import {
   FaYoutube,
   FaInstagram,
 } from "react-icons/fa";
-import "./Landing.css"; // Your CSS styling
-import { socialsData } from "../../Data/socialsData"; // Social media links data
+import "./Landing.css";
+import { socialsData } from "../../Data/socialsData";
 import Manikumarreddy from "../../assets/resume/Manikumarreddy.pdf";
 import { LandingData } from "../../Data/Landing";
 import parse from "html-react-parser";
+
 const Landing = () => {
   return (
-    <div className="landing">
-      <div className="landing--container">
-        {/* Left Section - Social Media Links */}
-        <div className="landing--container-left">
-          <div className="lcl--content">
+    <section className="landing-section">
+      <div className="landing-container">
+        {/* Left: Headline and CTA */}
+        <div className="landing-left">
+          <p className="intro-text">Welcome to my site</p>
+          <h1 className="gradient-text">
+            Hi! I'm <span>Manikumar</span><br /> Java Backend Developer
+          </h1>
+          <p className="sub-text">{parse(LandingData.para1)}</p>
+          <p className="sub-text">{parse(LandingData.para2)}</p>
+          <p className="sub-text">{parse(LandingData.para3)}</p>
+
+          <div className="button-group">
+            <a
+              href={Manikumarreddy}
+              download="resume"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="primary-btn">View Resume</button>
+            </a>
+            <button className="secondary-btn">Hire Me</button>
+          </div>
+        </div>
+
+        {/* Right: Image and Social Icons */}
+        <div className="landing-right">
+          <div className="image-wrapper">
+            <img
+              src={LandingData.dp}
+              alt="Manikumarreddy Gajjela"
+              className="profile-img"
+            />
+          </div>
+
+          {/* Socials now below the image */}
+          <div className="social-icons-right">
             {socialsData.linkedIn && (
               <a href={socialsData.linkedIn} target="_blank" rel="noreferrer">
                 <FaLinkedin className="landing--social" aria-label="LinkedIn" />
@@ -40,45 +74,13 @@ const Landing = () => {
             )}
             {socialsData.instagram && (
               <a href={socialsData.instagram} target="_blank" rel="noreferrer">
-                <FaInstagram
-                  className="landing--social"
-                  aria-label="Instagram"
-                />
+                <FaInstagram className="landing--social" aria-label="Instagram" />
               </a>
             )}
           </div>
         </div>
-
-        {/* Image Section */}
-        <img
-          src={LandingData.dp}
-          alt="Manikumarreddy Gajjela"
-          className="landing--img"
-          style={{ width: "380px", borderRadius: "50%" }}
-        />
-
-        {/* Right Section - About Description */}
-        <div className="landing--container-right">
-          <div className="lcr--content" style={{ color: "#e0d9d9" }}>
-            <h1>About Me</h1>
-            <p> {parse(LandingData.para1)}</p>
-            <p> {parse(LandingData.para2)}</p>
-            <p>{parse(LandingData.para3)} </p>
-            {/* Buttons Section */}
-            <div className="button-container">
-              <a
-                href={Manikumarreddy}
-                download="resume"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="landing-button">View Resume</button>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
